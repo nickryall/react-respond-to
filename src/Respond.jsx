@@ -1,4 +1,5 @@
 import React from 'react';
+import find from 'array-find';
 
 // Convert a value that potentially isn't an array into one
 // If it is already an array just return it
@@ -86,11 +87,11 @@ const Respond = React.createClass({
         return result;
       }
     } else {
-      const defaultChild = valueToArray(children).find(c => c.props.default);
+      const defaultChild = find(valueToArray(children), c => c.props.default);
 
       if (matches.length) {
         let val = matches[matches.length - 1][1];
-        let child = valueToArray(children).find(c => c.props.value === val);
+        let child = find(valueToArray(children), c => c.props.value === val);
 
         if ((!mounted && child.props.initial) || mounted) {
           return child;

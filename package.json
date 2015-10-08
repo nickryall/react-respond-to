@@ -25,7 +25,9 @@
   "peerDependencies": {
     "react": ">=0.12.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "array-find": "^1.0.0"
+  },
   "devDependencies": {
     "babel": "^5.2.16",
     "babel-core": "^5.2.6",

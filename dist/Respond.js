@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _arrayFind = require('array-find');
+
+var _arrayFind2 = _interopRequireDefault(_arrayFind);
+
 // Convert a value that potentially isn't an array into one
 // If it is already an array just return it
 function valueToArray(value) {
@@ -120,14 +124,14 @@ var Respond = _react2['default'].createClass({
         return result;
       }
     } else {
-      var defaultChild = valueToArray(children).find(function (c) {
+      var defaultChild = (0, _arrayFind2['default'])(valueToArray(children), function (c) {
         return c.props['default'];
       });
 
       if (matches.length) {
         var _ret = (function () {
           var val = matches[matches.length - 1][1];
-          var child = valueToArray(children).find(function (c) {
+          var child = (0, _arrayFind2['default'])(valueToArray(children), function (c) {
             return c.props.value === val;
           });
 
