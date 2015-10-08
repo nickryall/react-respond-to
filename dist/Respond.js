@@ -16,6 +16,8 @@ var _arrayFind2 = _interopRequireDefault(_arrayFind);
 
 require('match-media');
 
+require('match-media/matchMedia.addListener.js');
+
 // Convert a value that potentially isn't an array into one
 // If it is already an array just return it
 function valueToArray(value) {
@@ -92,7 +94,7 @@ var Respond = _react2['default'].createClass({
         var v = c.props.value;
         var queryString = '(' + to + ': ' + c.props.value + ')';
 
-        var q = matchMedia(queryString).matches;
+        var q = matchMedia(queryString);
         q.addListener(_this2.onMatch);
         return [q, v];
       });

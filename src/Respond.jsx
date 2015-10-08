@@ -1,6 +1,7 @@
 import React from 'react';
 import find from 'array-find';
 import 'match-media';
+import 'match-media/matchMedia.addListener.js';
 
 // Convert a value that potentially isn't an array into one
 // If it is already an array just return it
@@ -64,7 +65,7 @@ const Respond = React.createClass({
         const v = c.props.value;
         const queryString = `(${ to }: ${ c.props.value })`;
 
-        let q = matchMedia(queryString).matches;
+        let q = matchMedia(queryString);
         q.addListener(this.onMatch);
         return [q, v];
       });
