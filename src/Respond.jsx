@@ -1,6 +1,7 @@
 import React from 'react';
 import find from 'array-find';
 import 'match-media';
+import 'match-media/matchMedia.addListener.js';
 
 // Convert a value that potentially isn't an array into one
 // If it is already an array just return it
