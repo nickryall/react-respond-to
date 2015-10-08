@@ -16,8 +16,6 @@ var _arrayFind2 = _interopRequireDefault(_arrayFind);
 
 require('match-media');
 
-require('match-media/matchMedia.addListener.js');
-
 // Convert a value that potentially isn't an array into one
 // If it is already an array just return it
 function valueToArray(value) {
