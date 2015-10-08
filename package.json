@@ -30,7 +30,6 @@
     "match-media": "^0.2.0"
   },
   "devDependencies": {
-    "array-find": "^1.0.0",
     "babel": "^5.2.16",
     "babel-core": "^5.2.6",
     "babel-loader": "^5.0.0",
@@ -46,7 +45,6 @@
     "gulp-util": "^3.0.4",
     "gulp-watch": "^1.1.0",
     "gulp-webpack": "^1.4.0",
-    "match-media": "^0.2.0",
     "object.assign": "^1.1.1",
     "transform-loader": "^0.2.1",
     "webpack": "^1.5.3"

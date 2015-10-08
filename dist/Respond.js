@@ -14,9 +14,7 @@ var _arrayFind = require('array-find');
 
 var _arrayFind2 = _interopRequireDefault(_arrayFind);
 
-var _matchMedia = require('match-media');
-
-var _matchMedia2 = _interopRequireDefault(_matchMedia);
+require('match-media');
 
 // Convert a value that potentially isn't an array into one
 // If it is already an array just return it
@@ -83,7 +81,7 @@ var Respond = _react2['default'].createClass({
     if (at) {
       var queryString = '(' + to + ': ' + at + ')';
 
-      var q = (0, _matchMedia2['default'])(queryString);
+      var q = matchMedia(queryString);
       q.addListener(this.onMatch);
 
       this.queries = [[q, at]];
@@ -94,7 +92,7 @@ var Respond = _react2['default'].createClass({
         var v = c.props.value;
         var queryString = '(' + to + ': ' + c.props.value + ')';
 
-        var q = (0, _matchMedia2['default'])(queryString);
+        var q = matchMedia(queryString).matches;
         q.addListener(_this2.onMatch);
         return [q, v];
       });
